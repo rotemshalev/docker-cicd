@@ -17,9 +17,9 @@ node {
      }
    }
    stage('docker run') {
-     sh label: '', script: '''cd basics && docker rm docker_test
-      docker run --rm -tid --name docker_test -p 3000 yanivomc/docker-nodejs-demo:latest
-      docker kill docker_test
+     sh label: '', script: '''cd basics && docker rm docker-nodejs-demo
+      docker run --rm -tid --name docker-nodejs-demo -p 3000 yanivomc/docker-nodejs-demo:latest
+      docker kill docker-nodejs-demo
       
       '''
      }
