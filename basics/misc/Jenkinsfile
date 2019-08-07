@@ -8,7 +8,7 @@ node {
    stage('test') {
      nodejs(nodeJSInstallationName: 'NodeJS') {
        sh 'cd basics && npm install --only=dev'
-       sh 'npm test'
+       sh 'cd basics && npm test'
      }
    }
    stage('docker build/push') {
